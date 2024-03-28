@@ -14,7 +14,7 @@ ev_durumu <- mutate(apartments, evDurumu = case_when(
   construction.year > 2000 ~ "Yeni"))
 View(arrange(ev_durumu, construction.year))
 
-#evleri durumlarına göre gruplayarak bu grupların maksimumdaki ve minimumdaki liderlerini bulma
+#evleri durumlarına göre gruplayarak bu grupların maksimumdaki ve minimumdaki metrekare liderlerini bulma
 kategori_lideri <- function(df) {
   df %>%
     mutate(evDurumu = case_when(
